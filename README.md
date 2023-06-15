@@ -24,6 +24,7 @@ pub fn main() !void {
 
     // Because we set usage_threshold to 0.9 this will get allocated in the
     // same row as E, since it uses at least 90% of the shelf height.
+    // However, it produces wasted space that is marked red in the output.
     _ = try shelf.allocateNamed(.{ .width = 500, .height = 90 }, "H");
 
     var stdout = std.io.getStdOut();
